@@ -1,0 +1,27 @@
+CHAR(size)						String
+VARCHAR(size)					String
+BINARY(size)					byte[]
+VARBINARY(size)					byte[]
+
+Numeric data types:
+BIT(size)						boolean				(Boolean)
+TINYINT(size)					short	 			(Integer)
+BOOL							boolean				(Boolean)
+BOOLEAN							boolean				(Boolean)
+SMALLINT(size)					short				(Integer)
+INT(size)						int					(Integer)
+INTEGER(size)					int					(Integer)
+BIGINT(size)					long				(Long)
+FLOAT(size, d)					float				(Float)
+FLOAT(p)						float				(Float)
+DOUBLE(size, d)					double				(Double)
+DOUBLE PRECISION(size, d)	 	double				(Double)
+DECIMAL(size, d)				java.math.BigDecimal
+DEC(size, d)					java.math.BigDecimal
+
+Date and Time data types:
+DATE							java.sql.Date
+DATETIME(fsp)					java.sql.Timestamp
+TIMESTAMP(fsp)					java.sql.Timestamp
+TIME(fsp)						java.sql.Date
+YEAR							String
