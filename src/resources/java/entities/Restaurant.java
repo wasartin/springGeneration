@@ -14,23 +14,23 @@ public class Restaurant {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="restaurant_id")
 	private int restaurant_id;
-	
+
 	/**
 	 * The name of the restaurant
 	 */
 	@Column(name="restaurant_name")
 	private String restaurant_name;
-	
+
 	/**
 	 * The last time anything with this restaurant was updated
 	 */
 	@Column(name="last_updated")
 	private Timestamp last_updated;
-	
+
 	public Restaurant(){
 		super();
 	}
-	
+
 	public Restaurant(int id, String name, Timestamp last_updated) {
 		this.restaurant_id = id;
 		this.restaurant_name = name;

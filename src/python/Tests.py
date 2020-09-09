@@ -15,7 +15,6 @@ class Tests():
         reader_test_results = reader_tests(verbose)
         return reader_test_results
 
-
 def main():
     print("\nRunning Test Files Verbose")
     test_runner = Tests(True)

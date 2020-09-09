@@ -55,6 +55,6 @@ def main():
 
     success = run_all_io_tests(v)
     if(v):
-        print(f"All Tests passed: {success}")
+        print(f"All Reader Tests passed: {success}")
 
 main()

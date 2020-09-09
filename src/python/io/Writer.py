@@ -3,11 +3,14 @@
 """
 
 
-def write_entity():
-	print("unimp")
+def write_entity(table):
 
-def write_controller():
-    print("unimp")
+	pass
 
-def write_repository():
-    print("unimp")
+def write_controller(table):
+
+    pass
+
+def write_repository(table):
+
+    pass

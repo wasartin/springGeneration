@@ -21,7 +21,6 @@ def parse_table(file_contents):
 	table_name = table_name.replace('(', '')
 	return table_name
 
-
 possible_data_types = 	[
 							"CHAR", "VARCHAR", "BINARY", "VARBINARY",
 							"BIT", "TININT", "BOOL", "BOOLEAN",
