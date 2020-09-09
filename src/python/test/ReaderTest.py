@@ -25,8 +25,18 @@ def parse_attributes_test(verbose):
     relative_file_path = "../../resources/sql/accountSchema.sql"
     file_contents = Reader.open_file(relative_file_path)
 
-    table_name = Reader.parse_attributes(file_contents)
+    actual_attribute_dict = Reader.parse_attributes(file_contents)
+    expected_attribute_dict = {'account_email': 'VARCHAR', 'account_id': 'VARCHAR', 'account_type': 'CHAR'}
 
+    count = 0
+
+    if len(actual_attribute_dict) != len(expected_attribute_dict):
+        return 0
+    for key in expected_attribute_dict:
+        if actual_attribute_dict[key] == expected_attribute_dict[key]:
+            count+= 1
+    if count == len(expected_attribute_dict):
+        return 1
     return 0
 
 def run_all_io_tests(verbose):
@@ -46,6 +56,5 @@ def main():
     success = run_all_io_tests(v)
     if(v):
         print(f"All Tests passed: {success}")
-
 
 main()
