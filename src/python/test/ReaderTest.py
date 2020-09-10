@@ -6,6 +6,7 @@ import Reader
 # Return 1 on success
 def open_file_test(verbose):
     relative_file_path = "../../resources/sql/accountSchema.sql"
+
     file_contents = Reader.open_file(relative_file_path)
     if( len(file_contents) != 0 ):
         return 1
@@ -15,7 +16,9 @@ def parse_table_test(verbose):
     relative_file_path = "../../resources/sql/accountSchema.sql"
     file_contents = Reader.open_file(relative_file_path)
 
-    table_name = Reader.parse_table(file_contents)
+    parser = Reader.SQL_Parser(file_contents)
+
+    table_name = parser.parse_table()
 
     if(table_name == "account"):
     	return 1
@@ -25,7 +28,9 @@ def parse_attributes_test(verbose):
     relative_file_path = "../../resources/sql/accountSchema.sql"
     file_contents = Reader.open_file(relative_file_path)
 
-    actual_attribute_dict = Reader.parse_attributes(file_contents)
+    parser = Reader.SQL_Parser(file_contents)
+
+    actual_attribute_dict = parser.parse_attributes()
     expected_attribute_dict = {'account_email': 'VARCHAR', 'account_id': 'VARCHAR', 'account_type': 'CHAR'}
 
     count = 0
