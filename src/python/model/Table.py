@@ -1,21 +1,30 @@
-class Table():
-    def __init__(self, name, schema, attributes):
-        self.name = name
-        self.schema = schema
-        self.attributes = attributes
+class Table:
+    def __init__(self, name='', schema='', attributes=''):
+        self._name = name
+        self._schema = schema
+        self._attributes = attributes
 
-    def Name(self):
-        return self.name
+    def get_name(self):
+        return self._name
 
-    def Schema(self):
-        return self.schema
+    def set_name(self, value):
+        self._name = value
 
-    def Attributes(self):
-        return self.attributes
+    def get_schema(self):
+        return self._schema
 
-    def __str__(self):
+    def set_schema(self, value):
+        self._schema = value
+
+    def get_attributes(self):
+        return self._attributes
+
+    def set_attributes(self, value):
+        self._attributes = value
+
+    def get_str(self):
         str = ''
-        str += f"{self.name}"
-        for i in self.attributes:
-            str += f"\ti: {self.attributes[i]}"
+        str += f"{self._name}\n"
+        for key, value in self._attributes.items():
+            str += f"\t{key}: {value}\n"
         return str
