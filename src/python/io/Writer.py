@@ -89,7 +89,10 @@ class Entity_Writer(object):
 			getters_setters_list.append("\t}\n")
 
 			# Setter
-
+			getters_setters_list.append(f"\n\tpublic {value} set_{key}({value} {key})")
+			getters_setters_list.append("{\n")
+			getters_setters_list.append(f"\t\tthis.{key} = {key};\n")
+			getters_setters_list.append("\t}\n")
 
 		new_file.writelines(getters_setters_list)
 
