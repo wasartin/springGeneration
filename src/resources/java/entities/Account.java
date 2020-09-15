@@ -20,7 +20,7 @@ public class Account {
 	public account() {//No arg constructor required by JPA for building properly
 		super();
 	}
-	
+
 	public account(String account_email, String account_type) {
 		super();
 		this.account_email = account_email;
